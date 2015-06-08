@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "beefy": "^2.1.1",
+    "brfs": "^1.2.0",
+    "browserify": "^9.0.3",
+    "node-sass": "^2.0.1"
+  },
+  "scripts": {
+    "start": "beefy slideify.js:bundle.js --index=./index.html --open --live -- -t brfs",
+    "css": "node-sass slideify/css/theme/smidig.scss slideify/css/theme/smidig.css",
+    "js": "browserify slideify.js -t brfs -o bundle.js"
+  }
+}
