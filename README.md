@@ -1,6 +1,11 @@
 # Making a web-powered MIDI-controlled synthesizer
 
-`npm i && npm start` to view
+Visible at http://mollerse.github.io/diysynth/
+
+
+## Running locally
+
+`npm i && npm start` to view.
 
 All code in the presentation can be found in the `code.js`-file
 
