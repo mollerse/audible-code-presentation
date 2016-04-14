@@ -76,7 +76,7 @@ function Supersaw(note, sawNumber, detune) {
 
 connect();
 
-
+//Hooks for triggering specific code in the slides
 Reveal.addEventListener('hello', function() {
   var notes = [];
 

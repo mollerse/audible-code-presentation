@@ -1,22 +1,17 @@
-# Making a web-powered MIDI-controlled synthesizer
+# Audible Code
 
-Visible at http://mollerse.github.io/diysynth/
+Kan sees på http://mollerse.github.io/audible-code-presentation/
 
 
-## Running locally
+## Kjøre lokalt
 
-`npm i && npm start` to view.
+`npm i && npm start` to for å se.
 
-All code in the presentation can be found in the `code.js`-file
+All koden fra presntasjonen finner du i `code.js`-fila.
 
 # Abstract
 
-The web is becoming a very interesting platform for creative experimentation.
-The introduction of the WebMIDIAPI and the capabilities of the WebAudioAPI for
-creating sounds has opened the doors for musical expressions in a myriad of
-ways.
-
-One such way is to build a simple polyphonic supersaw synthesizer which you can
-control with a MIDI-enabled interface (such as a tiny keyboard). This is easier
-than it sounds, and I will show you how. Leaving this talk you will be equipped
-tostart creating music and explore the creative side of the web.
+Nettleseren som musikkinstrument? JavaScript som tangenter i et piano? WebAudio
+og WebMIDI gjør nettleseren din til det mest portable elektroniske instrumentet
+til nå, med et par linjer kode har du ditt eget instrument. Kun kreativiteten
+setter grenser for hva du kan høre av din egen kode!
