@@ -54,47 +54,59 @@
 
 <section class="midten">
   <h2>Audible Code</h2>
-  <p>Stian Veum Møllersen / @mollerse</p>
-  <p>BEKK</p>
+  <p>Stian Veum Møllersen</p>
+  <p>@mollerse</p>
 </section>
 
 <section class="midten">
-  <h2 class="fragment">Jeg liker musikk.</h2>
+  <h2 class="fragment">I like music.</h2>
   <aside class="notes">
-    <p>Ok, jeg har en innrømmelse å komme med. - pause - Jeg liker musikk. Ok, de som
-kjenner meg, eller bare har sett meg jobbe med headset på, ble kanskje ikke så
-veldig overaska nå. Jeg har likt musikk så lenge jeg kan huske. Helt fra min
-første CD med Ace of Base tidlig tidlig på 90tallet.</p>
+    <p>
+      Ok, I have a confession to make - pause - I like music. This is usually the
+      place where i make a joke about those who know me not being suprised, but in
+      this crowd I don't think i know all that many people - So that wont work.
+      But trust me, it would have been funny. So - I have loved music since I was
+      very young. All the way back to my first CD from Ace of Base in the early
+      90s.
+    </p>
   </aside>
 </section>
 
 <section class="midten">
-  <h2 class="fragment">Jeg liker også programmering.</h2>
+  <h2 class="fragment">I also like programming.</h2>
   <aside class="notes">
-    <p>Dette er nok ikke like overaskende, med tanke på hvor vi befinner oss nå. Men
-det jeg liker aller aller best med programmering er at det gir meg en mulighet
-til kreativ utfoldelse. Skriv et par linjer med kode og du få de utroligste ting
-til å dukke opp på pcskjermen din.</p>
+    <p>
+      This might be less suprising, given where we are, but I also really enjoy
+      making things with code. I love the way code gives me an outlet for
+      creativity and experimentation. Write a couple of lines of code and the most
+      wonderous things can happen on your screen - pure magic.
+    </p>
   </aside>
 </section>
 
 <section class="midten">
-  <h2>Musikk + Programmering = &lt;3</h2>
+  <h2>Music + Programming = &lt;3</h2>
   <aside class="notes">
-    <p>Tanken på å kombinere mine to favoritt-ting har alltid vært en drøm for meg.
-Kanskje spesielt da jeg ikke duger på noen instrumenter, kanskje utenom
-finger-trommer - der er jeg en skikkelig røver. Derfor ble jeg mildt sagt
-hoppende glad når jeg oppdaget at jeg kunne generere min egen lyd med JavaScript
-i nettleseren. YES! Nå er det min tur!</p>
+    <p>
+      The thought of combining two of my favourite things have allways been a
+      dream of mine. Especially because I dont really have any talent whatsoever
+      for traditional instruments - maybe except for finger-drums. Just ask my
+      colleagues. That is why I got so exicted (yes, this is a Pointer Sisters
+      reference) that I just couldn't hide it when I discovered that I could
+      generate sounds with JavaScript in the browser. Yes! Finnaly my turn to
+      rock out!
+    </p>
   </aside>
 </section>
 
 <section class="midten">
   <h2>Enter WebAudio</h2>
   <aside class="notes">
-    <p>WebAudio har eksistert i diverse former siden sirkus 2010. WebAudio har mange
-spennende egenskaper, men i dag skal vi se litt nærmere på hva det kan tilby oss
-i form av audio syntese - det å skape lyd.</p>
+    <p>
+      WebAudio has existed in various forms since about 2010. It has many
+      exciting abilities, but today we will take a closer look at what it can
+      offer us in the form of audio synthesis - the creation of sound.
+    </p>
   </aside>
 </section>
 
@@ -109,12 +121,19 @@ amp.connect(context.destination);</code></pre>
     <pre class="fragment"><code class="js">oscillator.start();</code></pre>
     <pre class="fragment"><code class="js">amp.gain.value = 1;</code></pre>
   </div>
+  <aside class="notes">
+    <p>
+      This is a hello world of sorts using WebAudio.
+    </p>
+  </aside>
 </section>
 
 <section class="midten">
-  <h3>Her var det mye nytt på en gang</h3>
+  <h3>That was a lot to take in</h3>
   <aside class="notes">
-    <p>Her var det veldig mange nye begreper. Oscillators, Gain? Amp? Context?</p>
+    <p>
+      That was a lot to take in. Oscillators? Gain? Amp? Context?
+    </p>
   </aside>
 </section>
 
@@ -123,13 +142,15 @@ amp.connect(context.destination);</code></pre>
   <h2>The WebAudio graph</h2>
   <img src="graph.png">
   <aside class="notes">
-    <p>Hvis vi tegner opp det vi laga i et litt mer visuellt medium. Den første nye
-tingen vi laga var en Oscillator. En oscillatorer en komponent som genererer et
-signal med en gitt frekvens. Noen av dere husker det sikkert fra skolen. En Gain
-er en annen type node som fungerer som en slags gate. Vi kan manipulere
-gain-verdien til Gain-noden og det vil styre hvor mye av signalet fra
-Oscillatoren som når AudioDestination. Dette kan vi utnytte til å skru av og på
-lyden dynamisk.</p>
+    <p>
+      If we visualize what we just made in something more digestable, like the
+      WebAudio debugger graph from Firefox, we can see more clearly. An oscillator
+      is a component that generates a signal with a given frequency. Some of you
+      might remember this from school. A Gain node is a different kind of node
+      that functions kind of like a gate. We can manipulate the gain-value of the
+      Gain node and control how much of the signal from the oscillator we let
+      through. We can use this to dynamically turn the sound on and off.
+    </p>
   </aside>
 </section>
 
@@ -152,12 +173,15 @@ lyden dynamisk.</p>
 <section class="midten">
   <h2>MIDI &mdash; Musical Instrument Digital Interface</h2>
   <aside class="notes">
-    <p>En standard som definerer en protokoll, digitale interfaces og connectors for musikkinstrumenter.</p>
+    <p>
+      A standard which defines a protocoll, digital interfaces and connectors
+      for musical instruments.
+    </p>
   </aside>
 </section>
 
 <section data-state="hellomidi">
-  <h2>Legge til MIDI-devices</h2>
+  <h2>Connect a MIDI-device</h2>
   <pre><code>navigator.requestMIDIAccess()
   .then(midiConnected);</code></pre>
   <pre class="fragment"><code class="js">function midiConnected(midi) {
@@ -172,7 +196,7 @@ lyden dynamisk.</p>
 </section>
 
 <section data-state="hello2">
-  <h2>Spille ulike noter</h2>
+  <h2>Playing different notes</h2>
   <pre class="fragment"><code class="js">function frequencyFromNoteNumber(note) {
   return 440 * Math.pow(2,(note-69)/12);
 }
@@ -182,12 +206,12 @@ oscillator.frequency.value =
 </section>
 
 <section data-state="hello3">
-  <h2>Forandre sounden</h2>
+  <h2>Change the sound</h2>
   <pre class="fragment"><code class="js">oscillator.type = 'sawtooth';</code></pre>
 </section>
 
 <section data-state="basicsynth">
-  <h2>Polyfonisk synth</h2>
+  <h2>Polyphonic synth</h2>
   <pre><code>var notes = {};
 function on(note) {
   var n = Note(note);
@@ -204,10 +228,12 @@ function off(note) {
   <h2>The Supersaw</h2>
   <p class="fragment">Multiple detuned sawtooth oscillators. Heavily used in the EDM style of music.</p>
   <aside class="notes">
-    <p>Originally from the Roland JP-8000. It was made to emulate more than one
-sawtooth oscillator. Each sawtooth oscillator is slightly detuned against one
-another. This sort of sound gained some notoriety in the early 2000s with the
-rise of electronic dance music.</p>
+    <p>
+      Originally from the Roland JP-8000. It was made to emulate more than one
+      sawtooth oscillator. Each sawtooth oscillator is slightly detuned against
+      one another. This sort of sound gained some notoriety in the early 2000s
+      with the rise of electronic dance music.
+    </p>
   </aside>
 </section>
 
@@ -225,7 +251,7 @@ for (var i = 0; i < numSaws; i++) {
 </section>
 
 <section>
-  <h2>Hva har vi laga?</h2>
+  <h2>What have we made?</h2>
   <div class="">
     <img src="graph2.png" width="1014" height="646"/>
   </div>
@@ -233,17 +259,17 @@ for (var i = 0; i < numSaws; i++) {
 
 <section class="midten">
   <h2>Demo!</h2>
-  <span>Kode: <a href="http://github.com/mollerse/audible-code-presentation">github/mollerse/audible-code-presentation</a>
+  <span>Code: <a href="http://github.com/mollerse/audible-code-presentation">github/mollerse/audible-code-presentation</a>
   </span>
 </section>
 
 <section class="midten">
-  <h2>Gratulerer!</h2>
-  <p>Du er nå en musiker.</p>
+  <h2>Congratulations!</h2>
+  <p>You are now musicians.</p>
 </section>
 
 <section class="midten">
   <h1>Thanks for listening!</h1>
-  <p>Stian Veum Møllersen / @mollerse</p>
-  <p>BEKK</p>
+  <p>Stian Veum Møllersen</p>
+  <p>@mollerse</p>
 </section>
